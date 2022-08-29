@@ -1,7 +1,22 @@
-import React from 'react';
+import React from "react";
+import  CounterWithReducer from "./CounterWithReduser";
 
-const App = () => {
-  return <div>React Starter Kit in TypeScript</div>;
+interface AppProps {
+  message?: string;
+  // description: string;
+}
+
+const App = ({ message }: AppProps) => {
+  return (
+    <div>
+      <CounterWithReducer />
+    </div>
+  );
+};
+
+App.defaultProps = {
+  message: 123,
+  description: "This is App Componet",
 };
 
 export default App;
